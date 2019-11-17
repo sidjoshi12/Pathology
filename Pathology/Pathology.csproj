@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D80F82A2-EAE4-4541-A658-30532FAA99C6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pathology</RootNamespace>
+    <AssemblyName>Pathology</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\AutoBackup.cs" />
+    <Compile Include="Classes\Extensions\StringExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Master\frmPathology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmPathology.Designer.cs">
+      <DependentUpon>frmPathology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\frmAutoBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\frmAutoBackup.Designer.cs">
+      <DependentUpon>frmAutoBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\frmBackupLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\frmBackupLog.Designer.cs">
+      <DependentUpon>frmBackupLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\frmQueryTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\frmQueryTest.Designer.cs">
+      <DependentUpon>frmQueryTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XControls\XButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XControls\XButtons.Designer.cs">
+      <DependentUpon>XButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XControls\Help\XColumns.cs" />
+    <Compile Include="XControls\Help\XHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XControls\Help\XHelp.Designer.cs">
+      <DependentUpon>XHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XControls\XCodeEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XControls\XDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XControls\XGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XControls\XMaskedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XControls\XNumTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XControls\ButtonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XControls\ButtonControl.Designer.cs">
+      <DependentUpon>ButtonControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Engine.cs" />
+    <Compile Include="XControls\XTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\frmReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmReportViewer.Designer.cs">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Master\frmPathology.resx">
+      <DependentUpon>frmPathology.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmReportViewer.resx">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\frmAutoBackup.resx">
+      <DependentUpon>frmAutoBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\frmBackupLog.resx">
+      <DependentUpon>frmBackupLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\frmQueryTest.resx">
+      <DependentUpon>frmQueryTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XControls\ButtonControl.resx">
+      <DependentUpon>ButtonControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XControls\XButtons.resx">
+      <DependentUpon>XButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XControls\Help\XHelp.resx">
+      <DependentUpon>XHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Test\" />
+    <Folder Include="Transaction\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\delete16.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\nextbtn.png" />
+    <None Include="Resources\resultset_first.png" />
+    <None Include="Resources\resultset_last.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Images\cancel.png" />
+    <None Include="Images\Search.png" />
+    <None Include="Resources\ok.png" />
+    <None Include="Resources\database.png" />
+    <None Include="Resources\zoom.png" />
+    <None Include="Images\ok.png" />
+    <None Include="Images\back.png" />
+    <None Include="Images\first.png" />
+    <None Include="Images\last.png" />
+    <None Include="Images\next.png" />
+    <None Include="Images\exit.png" />
+    <None Include="Images\add.png" />
+    <None Include="Images\edit.png" />
+    <None Include="Images\save.png" />
+    <None Include="Images\database.png" />
+    <None Include="Images\exe.png" />
+    <None Include="Images\saraswat.jpg" />
+    <None Include="Images\titleGold.png" />
+    <None Include="Images\TranspImg.png" />
+    <None Include="Images\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
